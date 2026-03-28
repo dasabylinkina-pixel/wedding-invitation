@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Свадьба Данилы и Дарьи</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== ОСНОВНОЙ ФОН ===== */
+
+body{
+margin:0;
+font-family:'Cormorant Garamond', serif;
+color:#2b2b2b;
+
+background-image:url("bg.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(60,0,20,0.25);
+z-index:-1;
+}
+
+/* ===== СВИТОК ===== */
+
+.scroll{
+max-width:720px;
+margin:auto;
+padding:120px 70px;
+background:rgba(246,239,230,0.95);
+position:relative;
+
+box-shadow:
+0 50px 120px rgba(0,0,0,.45),
+inset 0 0 80px rgba(0,0,0,.05);
+}
+
+/* ===== ФОТО ПАРЫ ===== */
+
+.couple-photo{
+width:100%;
+max-width:420px;
+margin:50px auto;
+display:block;
+
+border-radius:14px;
+border:6px solid rgba(201,164,106,0.6);
+
+box-shadow:0 20px 50px rgba(0,0,0,0.35);
+object-fit:cover;
+}
+
+/* ===== ДЕКОР ===== */
+
+.scroll::before,
+.scroll::after{
+content:"";
+position:absolute;
+width:160px;
+height:160px;
+background-size:contain;
+background-repeat:no-repeat;
+opacity:0.9;
+pointer-events:none;
+}
+
+.scroll::before{
+top:-40px;
+left:-40px;
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='%23C9A46A'><circle cx='100' cy='100' r='10'/></g></svg>");
+}
+
+.scroll::after{
+bottom:-40px;
+right:-40px;
+transform:rotate(180deg);
+background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='%23C9A46A'><circle cx='100' cy='100' r='10'/></g></svg>");
+}
+
+/* ===== ТЕКСТ ===== */
+
+.small-title{
+font-family:'Montserrat',sans-serif;
+letter-spacing:7px;
+font-size:15px;
+text-align:center;
+margin-bottom:40px;
+}
+
+.names{
+font-family:'Playfair Display',serif;
+font-size:68px;
+text-align:center;
+margin:30px 0;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+text-align:center;
+font-size:44px;
+margin:90px 0 40px;
+}
+
+p{
+font-size:22px;
+line-height:1.9;
+text-align:center;
+max-width:520px;
+margin:0 auto 28px;
+}
+
+.quote{
+font-style:italic;
+line-height:2.1;
+}
+
+.gold{
+color:#C9A46A;
+}
+
+/* ===== ДАТА ===== */
+
+.wedding-date{
+font-family:'Playfair Display',serif;
+font-size:54px;
+color:#C9A46A;
+text-align:center;
+margin:50px 0 10px;
+}
+
+.wedding-time{
+font-size:32px;
+text-align:center;
+margin-bottom:30px;
+}
+
+/* ===== ЭЛЕМЕНТЫ ===== */
+
+.divider{
+width:140px;
+height:1px;
+background:#C9A46A;
+margin:60px auto;
+position:relative;
+}
+
+.divider:after{
+content:"✦";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+top:-14px;
+color:#C9A46A;
+}
+
+.palette{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:30px 0 55px;
+}
+
+.color{
+width:60px;
+height:60px;
+border-radius:50%;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+margin:auto;
+}
+
+.color-label{
+margin-top:10px;
+font-size:18px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width:600px){
+
+.scroll{padding:70px 30px;}
+.names{font-size:42px;}
+h2{font-size:32px;}
+p{font-size:19px;}
+.wedding-date{font-size:38px;}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scroll">
+
+<div class="small-title">СВАДЕБНОЕ ПРИГЛАШЕНИЕ</div>
+
+<p>
+С радостью приглашаем вас разделить с нами день,<br>
+с которого начинается наша семья
+</p>
+
+<div class="names">
+Данила <span class="gold">&</span> Дарья
+</div>
+
+<!-- ФОТО -->
+<img src="photo.jpg" alt="Данила и Дарья" class="couple-photo">
+
+<p class="quote">
+Иногда один день меняет всё.<br>
+Для нас — это будет именно он.
+</p>
+
+<div class="divider"></div>
+
+<div class="wedding-date">20 июня 2026</div>
+<div class="wedding-time">15:00</div>
+
+<p>
+Раменское<br>
+Ресторан «Маради»
+</p>
+
+<div class="divider"></div>
+
+<h2>Дресс-код</h2>
+
+<p>Будем рады видеть вас в оттенках нашей свадебной палитры</p>
+
+<div class="palette">
+
+<div style="text-align:center;">
+<div class="color" style="background:#e8d8c3;"></div>
+<div class="color-label">Бежевый</div>
+</div>
+
+<div style="text-align:center;">
+<div class="color" style="background:#7A1E26;"></div>
+<div class="color-label">Бургунди</div>
+</div>
+
+<div style="text-align:center;">
+<div class="color" style="background:#000;"></div>
+<div class="color-label">Чёрный</div>
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<p>
+Будем благодарны, если вы сообщите,<br>
+сможете ли быть с нами в этот день
+</p>
+
+<p>
+С любовью, Данила и Дарья ✦
+</p>
+
+</div>
+
+</body>
+</html>
